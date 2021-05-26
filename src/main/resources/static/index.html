@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" 
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+		layout:decorator="layout/default">
+
+
+<head>
+	<title>Board List</title>
+	
+	<!-- Page level plugin CSS-->
+	<th:block layout:fragment="contentsCss">
+	</th:block>
+</head>
+
+<body>
+
+	<div class="container" layout:fragment="content">
+	
+		<div class="page-header">
+			<h1>Centro comunitario</h1>
+		</div>
+		<br/>
+		
+		<input id="board_idx" type="hidden" th:value="${board?.idx}" />
+		<!-- <input id="board_create_date" type="hidden" th:value="${board?.createdDate}" /> -->
+		
+		<table class="table">
+			<tr>
+				<th style="padding:13px 0 0 15px;">Nombre</th>
+				<td>
+					<!-- 
+					<input type="text" class="form-control input-sm" id="board_createdDate"
+							readonly th:value="${board?.createdDate} ? ${#temporals.format(board.createdDate, 'yyyy-MM-dd HH:mm')} : ${board?.createdDate}" />
+					-->
+					<input id="board_title" type="text" class="form-control input-sm" />
+					<!--input type="text" class="form-control input-sm" id="board_createdDate" readonly/-->
+				</td>
+			</tr>
+			<tr>
+				<th style="padding:13px 0 0 15px;">Apellido Paterno</th>
+				<td>
+					<!-- <input id="board_title" type="text" class="form-control input-sm" th:value="${board?.title}" /> -->
+					<input id="board_title" type="text" class="form-control input-sm" />
+				</td>
+			</tr>
+			<tr>
+				<th style="padding:13px 0 0 15px;">Apellido Materno</th>
+				<td>
+					<!-- <input id="board_title" type="text" class="form-control input-sm" th:value="${board?.title}" /> -->
+					<input id="board_title" type="text" class="form-control input-sm" />
+				</td>
+			</tr>
+			<tr>
+				<th style="padding:13px 0 0 15px;">Edad</th>
+				<td>
+					<!-- <input id="board_title" type="text" class="form-control input-sm" th:value="${board?.title}" /> -->
+					<input id="board_title" type="text" class="form-control input-sm" />
+				</td>
+			</tr>
+			<tr>
+				<th style="padding:13px 0 0 15px;">Folio</th>
+				<td>
+					<!-- <input id="board_title" type="text" class="form-control input-sm" th:value="${board?.title}" /> -->
+					<input id="board_title" type="text" class="form-control input-sm" />
+				</td>
+			</tr>
+			<tr>
+				<th style="padding:13px 0 0 15px;">Direccion</th>
+				<td>
+					<!-- <input id="board_title" type="text" class="form-control input-sm" th:value="${board?.title}" /> -->
+					<input id="board_title" type="text" class="form-control input-sm" />
+				</td>
+			</tr>			
+			<tr>
+				<th style="padding:13px 0 0 15px;">Email</th>
+				<td>
+					<!-- <input id="board_title" type="text" class="form-control input-sm" th:value="${board?.title}" /> -->
+					<input id="board_title" type="text" class="form-control input-sm" />
+				</td>
+			</tr>
+			<tr>
+				<th style="padding:13px 0 0 15px;">Telefono</th>
+				<td>
+					<!-- <input id="board_title" type="text" class="form-control input-sm" th:value="${board?.title}" /> -->
+					<input id="board_title" type="text" class="form-control input-sm" />
+				</td>
+			</tr>
+			<tr>
+				<th style="padding:13px 0 0 15px;">Sexo</th>
+				<td>
+					<!-- <input id="board_title" type="text" class="form-control input-sm" th:value="${board?.title}" /> -->
+					<input id="board_title" type="text" class="form-control input-sm" />
+				</td>
+			</tr>
+
+		</table>
+		
+		 
+		<div class="pull-left">
+			<a href="/list" class="btn btn-success">Enviar</a>
+		</div>
+		
+		
+		<!--div class="pull-right">
+			<button th:if="!${board?.idx}" type="button" class="btn btn-primary" id="insert">Enviar</button>
+
+		</div-->
+		
+	</div>
+</body>
+</html>
