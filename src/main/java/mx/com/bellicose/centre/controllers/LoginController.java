@@ -5,11 +5,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import mx.com.bellicose.centre.entities.User;
 
 @Controller()
-@RequestMapping("/")
+@RequestMapping(path="/user", method = RequestMethod.POST)
 public class LoginController {
 
 	@GetMapping()
@@ -17,9 +18,9 @@ public class LoginController {
 		return "/list";
 	}
 
-	//@GetMapping({ "", "/" })
+	@GetMapping({ "", "/" })
 	//public String board(@RequestParam(value = "idx", defaultValue = "0") Long idx, Model model) throws Exception {
-	@GetMapping()
+	//@GetMapping()
 	public String user(Model model) throws Exception {
 		
 			User user = new User();
